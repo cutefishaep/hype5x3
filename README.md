@@ -69,10 +69,12 @@ OpenCore EFI configuration for Axioo HYPE 5 with AMD X3 processor. This config e
 ### 🔧 Solutions
 
 **Audio**  
-Use `VoodooHDA`. Install macOS first, then add `VoodooHDA` afterward. Audio kexts require post-install configuration to work properly.
+Use `VoodooHDA`. Install macOS first, then add `VoodooHDA` afterward. Audio kexts require post-install configuration to work properly.  
+📺 **Tutorial:** [VoodooHDA Installation Guide](https://www.youtube.com/watch?v=ul4IppSqYvk)
 
 **Wi-Fi**  
-Use a USB Wi-Fi dongle compatible with macOS, or tether from Android via USB.
+Use a USB Wi-Fi dongle compatible with macOS, or tether from Android via USB.  
+🔗 **Dongle Compatibility:** [Wireless USB Adapter List](https://github.com/chris1111/Wireless-USB-OC-Big-Sur-Adapter)
 
 ---
 
@@ -147,10 +149,12 @@ Konfigurasi OpenCore EFI untuk Axioo HYPE 5 dengan prosesor AMD X3. Config ini m
 ### 🔧 Cara Atasi
 
 **Audio**  
-Gunakan `VoodooHDA`. Install macOS terlebih dahulu, kemudian tambahkan `VoodooHDA` setelahnya. Audio kexts memerlukan konfigurasi post-install untuk bekerja dengan baik.
+Gunakan `VoodooHDA`. Install macOS terlebih dahulu, kemudian tambahkan `VoodooHDA` setelahnya. Audio kexts memerlukan konfigurasi post-install untuk bekerja dengan baik.  
+📺 **Tutorial:** [Panduan Instalasi VoodooHDA](https://www.youtube.com/watch?v=ul4IppSqYvk)
 
 **Wi-Fi**  
-Gunakan dongle Wi-Fi USB yang kompatibel dengan macOS, atau tethering dari Android via USB.
+Gunakan dongle Wi-Fi USB yang kompatibel dengan macOS, atau tethering dari Android via USB.  
+🔗 **Daftar Dongle:** [Wireless USB Adapter List](https://github.com/chris1111/Wireless-USB-OC-Big-Sur-Adapter)
 
 ---
 
