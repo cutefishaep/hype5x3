@@ -310,7 +310,7 @@ Before installing, configure BIOS as follows:
 | macOS Big Sur (11) | ✅ | Works |
 | macOS Monterey (12) | ✅ | Works |
 | macOS Ventura (13) | ⭐ **Recommended** | Best stability |
-| macOS Sonoma (14) | ✅ | Works |
+| macOS Sonoma (14) | ⚠️ Not recommended | Same workaround required — disables GPU acceleration |
 | macOS Sequoia (15) | ⚠️ Not recommended | Requires [workaround](https://github.com/ChefKissInc/NootedRed/issues/235#issuecomment-4567109847) that disables GPU acceleration — causes lag in video playback and After Effects |
 | macOS Tahoe (16) | ⚠️ Not recommended | Same workaround required as Sequoia |
 
@@ -557,7 +557,7 @@ Sebelum instalasi, konfigurasi BIOS sebagai berikut:
 | macOS Big Sur (11) | ✅ | Berfungsi |
 | macOS Monterey (12) | ✅ | Berfungsi |
 | macOS Ventura (13) | ⭐ **Direkomendasikan** | Stabilitas terbaik |
-| macOS Sonoma (14) | ✅ | Berfungsi |
+| macOS Sonoma (14) | ⚠️ Tidak direkomendasikan | Workaround yang sama — mematikan GPU acceleration |
 | macOS Sequoia (15) | ⚠️ Tidak direkomendasikan | Butuh [workaround](https://github.com/ChefKissInc/NootedRed/issues/235#issuecomment-4567109847) yang mematikan GPU acceleration — menyebabkan lag saat memutar video dan editing di After Effects |
 | macOS Tahoe (16) | ⚠️ Tidak direkomendasikan | Workaround yang sama seperti Sequoia |
 

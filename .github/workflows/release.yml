@@ -1,0 +1,57 @@
+name: Release EFI
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v1.0.0)"
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tag=${{ github.event.inputs.tag }}" >> $GITHUB_OUTPUT
+          else
+            echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Pack EFI folder
+        run: |
+          zip -r "EFI-${{ steps.version.outputs.tag }}.zip" EFI/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: "Axioo HYPE 5 X3 — EFI ${{ steps.version.outputs.tag }}"
+          body: |
+            ## OpenCore EFI — Axioo HYPE 5 AMD X3
+
+            ### Install
+            1. Download `EFI-${{ steps.version.outputs.tag }}.zip`
+            2. Extract dan copy folder `EFI/` ke partisi EFI drive kamu
+            3. Generate SMBIOS serial baru sebelum digunakan
+
+            ### Post-install
+            Buka folder `tools/` dan jalankan:
+            - `Install Wifi Driver.tool` — WiFi + Starskiff
+            - `Install Audio Driver.tool` — VoodooHDA
+
+            > ⚠️ Jangan lupa disable sleep: `sudo pmset -a sleep 0 disksleep 0 hibernatemode 0`
+
+            Lihat [README](https://github.com/${{ github.repository }}/blob/main/README.md) untuk panduan lengkap.
+          files: "EFI-${{ steps.version.outputs.tag }}.zip"
+          draft: false
+          prerelease: false
